@@ -1,0 +1,13 @@
+name: nextwordpredictor
+title: nextwordpredictor
+username:
+account: gfranc
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 254902
+bundleId: 1168998
+url: https://gfranc.shinyapps.io/nextwordpredictor/
+when: 1515520762.04299
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: Presentation.html|Presentation.Rmd|copy

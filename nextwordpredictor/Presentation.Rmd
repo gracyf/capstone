@@ -1,0 +1,35 @@
+---
+title: "The Next Word Predictor App"
+author: "Gracy"
+date: "9 January 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+- In this project a word prediction prototype app has been built that would predict the next word that they "most likely" want to type.
+- The app might be used in very limited resource devices and so an optimised training set of n-grams data is used from the twitter, news and blog corpuses.
+- Goal was to have smallest application with faster performance to predict next word with reasonable accuracy.
+
+## Algorithm Used to Predict Next Word
+
+- The data was read into R using data.table::fread for reading huge files.
+- Using text2vec package in R, the text was cleaned, tokenized, split into n-grams and stored with the count of their occurances.
+- I have collected data for 6 grams words in the corpus.
+- Smoothing was done using "STUPID BACKOFF" algorithm and calculated score using the frequency of the words. 
+- The query when entered is searched for matching word in the data bases and atmost three predicted words are listed in descending order of their frequency or their score.
+
+## Shiny App functionality
+
+- The app reads in the data tables for each n-gram along with its score. Setkeyv index is used for faster access
+- Takes input in the provided text box and reactively predicts the next words and lists below. Also the entire sentence once the next word is typed by the user.
+- The query when entered is searched in the data bases and atmost three words are listed in descending order of their frequency or their score.
+
+## Link to the App
+
+The Link to the shiny app created is : 
+
